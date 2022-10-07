@@ -10,7 +10,7 @@ def index (requests):
 
     periods = data['properties']['periods']
 
-    weather_data = []
+    forecast_data = []
 
     for period in periods:
         weather = {
@@ -24,9 +24,9 @@ def index (requests):
                  'endTime'          : period['endTime']
         }
         
-        weather_data.append(weather)
+        forecast_data.append(weather)
 
-    context = {'weather_data': weather_data}
+    context = {'forecast_data': forecast_data}
     print(context)
     return render(requests, 'weather/weather.html', context)
 
