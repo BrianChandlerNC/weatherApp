@@ -5,7 +5,7 @@ import requests
 
 # Create your views here.
 def index (requests):
-    with open("/home/tuckrodgers/workspace/tf/tf/weather/forecast.json", "r") as file:
+    with open("/.../weather/forecast.json", "r") as file:
         data = json.load(file)
 
     periods = data['properties']['periods']
